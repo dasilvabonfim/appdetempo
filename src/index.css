@@ -7,5 +7,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-
- 
+.App{
+  min-height: 100vh;
+  display: grid;
+  background: #e2d4ff
+}
