@@ -69,35 +69,53 @@ function Weather() {
 
 
 
-  return (
+return (
     <div className="weather">
         <div className="search-bar">
-            <input ref={inputRef} type="text" placeholder='Digite o nome da cidade' />
-            <img src={search_icon} alt="" onClick={() => search(inputRef.current.value)}/>
+            <input
+                ref={inputRef}
+                type="text"
+                placeholder="Digite o nome da cidade"
+                onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        search(inputRef.current.value);
+                    }
+                }}
+            />
+            <img
+                src={search_icon}
+                alt=""
+                onClick={() => search(inputRef.current.value)}
+            />
         </div>
-        {weatherData?<>
-            <img src={weatherData.icon} alt="" className='weather-icon'/>
-        <p className='temperature'>{weatherData.temperature}°C</p>
-        <p className="location">{weatherData.location}</p>
-        <div className="weather-data">
-            <div className="col">
-                <img src={humidity} alt="" />
-                <div>
-                    <p>{weatherData.humidity} %</p>
-                    <span>Úmidade</span>
+        {weatherData ? (
+            <>
+                <img src={weatherData.icon} alt="" className="weather-icon" />
+                <p className="temperature">{weatherData.temperature}°C</p>
+                <p className="location">{weatherData.location}</p>
+                <div className="weather-data">
+                    <div className="col">
+                        <img src={humidity} alt="" />
+                        <div>
+                            <p>{weatherData.humidity} %</p>
+                            <span>Úmidade</span>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <img src={wind} alt="" />
+                        <div>
+                            <p>{weatherData.wind} Km/H</p>
+                            <span>Velocidade do vento</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="col">
-                <img src={wind} alt="" />
-                <div>
-                    <p>{weatherData.wind} Km/H</p>
-                    <span>Velocidade do vento</span>
-                </div>
-            </div>
-        </div></>:<>
-        </>}
-        </div>
-  )
+            </>
+        ) : (
+            <>
+            </>
+        )}
+    </div>
+);
 }
 
 export default Weather
