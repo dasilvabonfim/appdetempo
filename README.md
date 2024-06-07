@@ -1,10 +1,11 @@
 # appDeTempo
-
+# https://dasilvabonfim.github.io/appdetempo/
 ![image](https://github.com/dasilvabonfim/appdetempo/assets/112987011/d078b0de-f8b0-4bdf-b082-73af3d257971)
 
 
 ## Sobre o Projeto
-appDeTempo é uma aplicação web desenvolvida com React.js, Vite e JavaScript que oferece informações atualizadas sobre o tempo. A interface do usuário é limpa e moderna, exibindo informações como temperatura, umidade e velocidade do vento.
+appDeTempo é uma aplicação web desenvolvida com React.js, Vite e JavaScript que oferece informações atualizadas sobre o tempo fornecidas pela API da openweathermap. A interface do usuário é limpa e moderna, exibindo informações como temperatura, umidade e velocidade do vento.
+
 
 ## Funcionalidades
 - **Previsão do Tempo em Tempo Real**: Veja a temperatura atual, umidade e velocidade do vento para sua localização.
